@@ -6,5 +6,5 @@ E = foreach D generate REPLACE(word, '^ *','') as word;
 F = group E by word;
 G = foreach F generate COUNT(E) as counts, group;
 H = order G by counts desc;
-I = LIMIT H 105;
+I = LIMIT H 101;
 store I into '$output';
